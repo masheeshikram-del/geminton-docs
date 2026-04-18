@@ -1,0 +1,12 @@
+# GitHub Pages (Jekyll) — https://docs.github.com/pages
+# After pushing, enable: Settings → Pages → Build from branch → main → /docs
+
+title: Geminton Legal
+description: Privacy and legal information for the Geminton mobile app.
+
+# Only legal pages are published on the Pages site; other Markdown here is repo docs.
+exclude:
+  - README.md
+  - FUNCTIONAL.md
+  - TECHNICAL.md
+  - PLAN_APP_HELP_ITERATION.md
