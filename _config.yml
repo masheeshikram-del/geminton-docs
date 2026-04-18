@@ -1,12 +1,10 @@
 # GitHub Pages (Jekyll) — https://docs.github.com/pages
-# After pushing, enable: Settings → Pages → Build from branch → main → /docs
+# Copy this entire folder to the root of https://github.com/masheeshikram-del/geminton-docs
+# Then: Settings → Pages → Branch main → / (root)
 
 title: Geminton Legal
 description: Privacy and legal information for the Geminton mobile app.
 
-# Only legal pages are published on the Pages site; other Markdown here is repo docs.
+# Developer README in this folder is for the app repo only; omit when copying, or keep excluded:
 exclude:
   - README.md
-  - FUNCTIONAL.md
-  - TECHNICAL.md
-  - PLAN_APP_HELP_ITERATION.md

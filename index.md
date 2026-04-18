@@ -13,4 +13,4 @@ Use these links in **Google Play**, **App Store Connect**, and anywhere a public
 
 ---
 
-*This site is generated from the `docs` folder of the Geminton project. To change the policy, edit `privacy-policy.md` and `privacy-policy-plain.txt` in the same folder and keep their “Last updated” dates in sync.*
+*Source of truth in the Geminton app repository: `docs/legal/` — edit `privacy-policy.md` and `privacy-policy-plain.txt` there, keep the same “Last updated” date on both, then copy this folder to the public docs repo and push.*
