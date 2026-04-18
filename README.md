@@ -2,21 +2,39 @@
 
 This folder contains **only** what should appear in the public **[geminton-docs](https://github.com/masheeshikram-del/geminton-docs)** repository. Do **not** add `FUNCTIONAL.md`, `TECHNICAL.md`, or agent docs here.
 
-## Publish to `geminton-docs`
+The site is **static** (`.nojekyll`): GitHub serves `index.html` and `privacy-policy.html` **without** running Jekyll, so you avoid build failures.
 
-1. Copy **all files in this folder** (including `README.md` if you want it on GitHub; it is not part of the Jekyll site unless you remove it from copy) into the **root** of `geminton-docs`. Typical set:
-   - `_config.yml`
-   - `index.md`
-   - `privacy-policy.md`
-   - `privacy-policy-plain.txt`
-2. **GitHub Pages:** Settings → Pages → Branch **`main`**, folder **`/ (root)`** (not `/docs`).
-3. Live URLs (replace with your username/repo if different):
-   - `https://masheeshikram-del.github.io/geminton-docs/`
-   - `https://masheeshikram-del.github.io/geminton-docs/privacy-policy.html`
-   - `https://masheeshikram-del.github.io/geminton-docs/privacy-policy-plain.txt`
+## Files to copy to `geminton-docs` (repo root)
+
+| File | Purpose |
+|------|---------|
+| `.nojekyll` | Tells GitHub Pages not to use Jekyll |
+| `index.html` | Home page |
+| `privacy-policy.html` | **Use this URL in Play / App Store** |
+| `privacy-policy-plain.txt` | Plain-text mirror |
+| `privacy-policy.md` | Optional; same wording, for GitHub preview / diffs |
+| `README.md` | This file (optional on the public repo) |
+
+## GitHub settings (if you see 404)
+
+1. Repo: **Settings → Pages**.
+2. **Build and deployment:** source **Deploy from a branch** (not “GitHub Actions” only with no workflow).
+3. Branch: **`main`**, folder **`/ (root)`** — **not** `/docs` unless your files live in a `docs/` subfolder (they should be at the **root** of `geminton-docs`).
+4. Wait **5–10 minutes** after the first successful deploy.
+5. Open **Actions** (or **Environments → github-pages**) and confirm the latest **pages build** succeeded. If it failed, open the log (often a wrong **Publishing** path).
+
+## Live URLs
+
+- `https://masheeshikram-del.github.io/geminton-docs/`
+- `https://masheeshikram-del.github.io/geminton-docs/privacy-policy.html`
+- `https://masheeshikram-del.github.io/geminton-docs/privacy-policy-plain.txt`
 
 ## Maintenance
 
-Edit **`privacy-policy.md`** and **`privacy-policy-plain.txt`** in this folder; keep **Last updated** identical on both. Commit in the **app** repo, then re-copy to `geminton-docs` and push.
+When the policy changes:
 
-See also **`docs/README.md`** in the app repo for the full documentation index.
+1. Edit **`privacy-policy.md`**, **`privacy-policy-plain.txt`**, and **`privacy-policy.html`** so they match (same **Last updated** on all).
+2. Commit in the **app** repo.
+3. Copy this folder to `geminton-docs`, commit, and push.
+
+See **`docs/README.md`** in the app repo for the full documentation index.
