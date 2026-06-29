@@ -4,7 +4,7 @@ title: Privacy Policy — Geminton
 
 # Privacy Policy — Geminton
 
-Last updated: April 15, 2026
+Last updated: June 29, 2026
 
 This policy describes how the Geminton mobile application (“App”) handles information when you use it. Geminton is built for gemstone traders to manage inventory, records, media, backups, and related workflows.
 
@@ -18,6 +18,7 @@ Contact for privacy questions: masheesh.ikram@gmail.com
 - Optional Google backup: If you sign in with Google and use backup, backup files are stored in your Google Drive (in an app-specific area), under Google’s terms.
 - Certificate scanning: When you scan a certificate image, the image (or encoded image data) may be sent to Google Cloud Vision so text can be detected and used to suggest fields. That processing is governed by Google’s policies.
 - Analytics screen: The App may download public currency exchange rates over the internet to show approximate conversions. Those requests are not used to send your gem list to the rate provider.
+- Optional Pro subscription: Some features require a paid subscription. Payment is processed by Google Play or the Apple App Store; Geminton does not receive or store your card or bank details. Subscription status may be checked using RevenueCat (see section 1.7).
 
 ## 1. Information the App processes
 
@@ -61,6 +62,16 @@ Rates may be cached on your device for a period of time to reduce data use.
 ### 1.6 Other apps and websites (WhatsApp, WeChat, email, browser)
 
 The App can open other apps or websites when you choose (for example to share text or open a link). Geminton does not control those services. Anything you send or post there is covered by their policies.
+
+### 1.7 Pro subscription and payments
+
+Geminton offers a free tier and an optional **Pro** subscription (monthly, auto-renewing).
+
+- **Free trial:** New subscribers may receive a free trial period (for example three months), as shown in the App and in the store listing. After the trial, the subscription renews at the published monthly price unless the user cancels in **Google Play** or **App Store** subscription settings before the trial ends.
+- **Payment processing:** All payments are handled by Google or Apple under their privacy policies and terms. Geminton does not process or store payment card or bank details.
+- **Subscription status:** The App checks with Google Play and/or the App Store, and may use **RevenueCat, Inc.** as a subscription management service, to determine whether Pro features are active. That process may involve purchase and subscription identifiers linked to your store account or an anonymous app user identifier. Geminton does not receive your full gem inventory as part of billing.
+- **Cancellation and refunds:** Manage or cancel subscriptions in your device’s store subscription settings. Uninstalling the App does not cancel billing. Refunds are handled by Google or Apple according to their policies.
+- **RevenueCat:** When used, RevenueCat receives subscription and purchase events from the stores to provide entitlement status to the App. See [RevenueCat’s privacy policy](https://www.revenuecat.com/privacy/) for how they handle that data.
 
 ## 2. Permissions
 
