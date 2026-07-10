@@ -4,7 +4,7 @@ title: Privacy Policy — Geminton
 
 # Privacy Policy — Geminton
 
-Last updated: June 29, 2026
+Last updated: July 10, 2026
 
 This policy describes how the Geminton mobile application (“App”) handles information when you use it. Geminton is built for gemstone traders to manage inventory, records, media, backups, and related workflows.
 
@@ -15,7 +15,7 @@ Contact for privacy questions: masheesh.ikram@gmail.com
 
 - Local-first: Your gem records, preferences, and most files stay on your device unless you use optional features that send data elsewhere.
 - No Geminton account: The App does not require a Geminton login. Geminton does not operate a central server that stores your inventory for you.
-- Optional Google backup: If you sign in with Google and use backup, backup files are stored in your Google Drive (in an app-specific area), under Google’s terms.
+- Optional cloud backup: On Android, if you sign in with Google and use backup, backup files are stored in your Google Drive (in an app-specific area), under Google’s terms. On iOS, if you use backup and are signed in to iCloud with iCloud Drive enabled, backup files may be stored in your iCloud Drive under Apple’s terms.
 - Certificate scanning: When you scan a certificate image, the image (or encoded image data) may be sent to Google Cloud Vision so text can be detected and used to suggest fields. That processing is governed by Google’s policies.
 - Analytics screen: The App may download public currency exchange rates over the internet to show approximate conversions. Those requests are not used to send your gem list to the rate provider.
 - Optional Pro subscription: Some features require a paid subscription. Payment is processed by Google Play or the Apple App Store; Geminton does not receive or store your card or bank details. Subscription status may be checked using RevenueCat (see section 1.7).
@@ -36,14 +36,26 @@ This data is mainly stored on your device using local storage (including a local
 
 The App accesses files you choose to open or import (for example Excel files, ZIP backups, or images from your gallery or camera). It does not read your whole photo library by itself; it uses the system file or photo picker, or the camera, when you take action.
 
-### 1.3 Optional Google Sign-In and Google Drive backup
+### 1.3 Optional cloud backup
 
-If you turn on cloud backup and sign in with Google, the App may:
+#### Google Drive (Android)
+
+If you turn on cloud backup and sign in with Google on Android, the App may:
 
 - Upload backup files (for example spreadsheets and/or ZIP archives that may include media) to Google Drive, in storage tied to your Google account for this App.
 - List or download backup files you already uploaded, so you can restore your data.
 
 Google handles sign-in and Drive under Google’s Privacy Policy and terms. Geminton does not receive your Google password.
+
+#### iCloud Drive (iOS)
+
+If you use backup on an iPhone or iPad and are signed in to iCloud with iCloud Drive enabled, the App may:
+
+- Upload backup files (for example spreadsheets and/or ZIP archives that may include media) to your iCloud Drive, in an app-specific area tied to your Apple ID.
+- Keep a local copy on the device for quick restore when available.
+- List or download backup files from iCloud Drive so you can restore your data.
+
+Apple handles iCloud sign-in and storage under Apple’s Privacy Policy and terms. Geminton does not receive your Apple ID password. iCloud backup does not show a separate permission prompt in the App; it relies on your device’s iCloud settings.
 
 ### 1.4 Certificate image analysis (Google Cloud Vision)
 
@@ -77,7 +89,7 @@ Geminton offers a free tier and an optional **Pro** subscription (monthly, auto-
 
 Depending on your device and how you use the App, you may be asked for permissions such as:
 
-- Internet — for currency rates, Google services used by the App (such as Vision or Drive), and general network use.
+- Internet — for currency rates, Google services used by the App (such as Vision or Drive), iCloud backup on iOS, and general network use.
 - Network state — to understand connectivity.
 - Camera — for example QR scanning or taking pictures of certificates.
 - Storage or photo library — when you pick or save files through the system.
@@ -96,11 +108,12 @@ If that changes in a future release, this policy will be updated.
 
 - On your device: Data stays until you delete it in the App, clear the App’s data, or uninstall the App. Uninstalling usually removes the App’s local data; exact behavior depends on your device.
 - Google Drive: Backups remain until you delete them in Google Drive or through the App’s backup features, according to Google’s rules.
+- iCloud Drive: Backups remain until you delete them in the Files app, iCloud Drive, or through the App’s backup features, according to Apple’s rules.
 - Exchange rate cache: Stored on the device and may be updated or cleared as the App runs.
 
 ## 5. Security
 
-No electronic system is perfectly secure. The App is intended for everyday business use. You should protect your device and your Google account, and treat backups as sensitive if they contain business or personal information.
+No electronic system is perfectly secure. The App is intended for everyday business use. You should protect your device and your Google or Apple account, and treat backups as sensitive if they contain business or personal information.
 
 ## 6. Children
 
@@ -108,7 +121,7 @@ The App is meant for business users and is not aimed at children. If you think i
 
 ## 7. International users
 
-If you use Google or other global services, data may be processed in different countries. See those providers’ policies for details.
+If you use Google, Apple iCloud, or other global services, data may be processed in different countries. See those providers’ policies for details.
 
 ## 8. Changes to this policy
 
