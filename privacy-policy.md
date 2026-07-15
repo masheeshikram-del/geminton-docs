@@ -4,7 +4,7 @@ title: Privacy Policy — Geminton
 
 # Privacy Policy — Geminton
 
-Last updated: July 13, 2026
+Last updated: July 15, 2026
 
 This policy describes how the Geminton mobile application (“App”) handles information when you use it. Geminton is built for gemstone traders to manage inventory, records, media, backups, and related workflows.
 
@@ -94,6 +94,7 @@ Depending on your device and how you use the App, you may be asked for permissio
 - Network state — to understand connectivity.
 - Camera — for example QR scanning or taking pictures of certificates.
 - Storage or photo library — when you pick or save files through the system.
+- Bluetooth (optional) — only if you choose **Print with Niimbot (Bluetooth)** from Gem Library. The App uses Bluetooth to discover and connect to your Niimbot label printer on your device. Geminton does not use Bluetooth for location tracking or advertising.
 
 The exact wording and timing of permission requests are controlled by your operating system.
 
