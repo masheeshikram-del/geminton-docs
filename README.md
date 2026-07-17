@@ -10,9 +10,12 @@ The site is **static** (`.nojekyll`): GitHub serves `index.html` and `privacy-po
 |------|---------|
 | `.nojekyll` | Tells GitHub Pages not to use Jekyll |
 | `index.html` | Home page |
-| `privacy-policy.html` | **Use this URL in Play / App Store** |
+| `privacy-policy.html` | **Privacy URL for Play / App Store** |
 | `privacy-policy-plain.txt` | Plain-text mirror |
 | `privacy-policy.md` | Optional; same wording, for GitHub preview / diffs |
+| `terms-of-use.html` | **Terms URL for App Store (subscriptions)** |
+| `terms-of-use-plain.txt` | Plain-text mirror |
+| `terms-of-use.md` | Optional; same wording, for GitHub preview / diffs |
 | `README.md` | This file (optional on the public repo) |
 
 ## GitHub settings (if you see 404)
@@ -28,12 +31,14 @@ The site is **static** (`.nojekyll`): GitHub serves `index.html` and `privacy-po
 - `https://masheeshikram-del.github.io/geminton-docs/`
 - `https://masheeshikram-del.github.io/geminton-docs/privacy-policy.html`
 - `https://masheeshikram-del.github.io/geminton-docs/privacy-policy-plain.txt`
+- `https://masheeshikram-del.github.io/geminton-docs/terms-of-use.html`
+- `https://masheeshikram-del.github.io/geminton-docs/terms-of-use-plain.txt`
 
 ## Maintenance
 
-When the policy changes:
+When the policy or terms change:
 
-1. Edit **`privacy-policy.md`**, **`privacy-policy-plain.txt`**, and **`privacy-policy.html`** so they match (same **Last updated** on all).
+1. Edit the matching **`.md`**, **`.txt`**, and **`.html`** files so they stay in sync (same **Last updated** on all).
 2. Commit in the **app** repo.
 3. Copy this folder to `geminton-docs`, commit, and push.
 

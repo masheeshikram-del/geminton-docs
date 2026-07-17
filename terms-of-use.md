@@ -1,0 +1,99 @@
+---
+title: Terms of Use — Geminton
+---
+
+# Terms of Use — Geminton
+
+Last updated: July 18, 2026
+
+These Terms of Use (“Terms”) govern your use of the Geminton mobile application (“App”). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, do not use the App.
+
+Operator: Mohamed Ikram  
+Contact: masheesh.ikram@gmail.com
+
+Our [Privacy Policy](privacy-policy.html) explains how the App handles information. These Terms explain your rights and responsibilities when using the App.
+
+## 1. What Geminton is
+
+Geminton is a tool for gemstone traders to manage inventory, pricing, sales, payments, media, backups, labels, exhibition sharing, and related workflows. The App is provided for general business convenience. It is **not** accounting, legal, tax, gemological, or financial advice.
+
+## 2. Who may use the App
+
+The App is intended for business users who are at least **18 years old** (or the age of majority where you live, if higher). You are responsible for ensuring your use complies with applicable laws in your country or region.
+
+## 3. Your records and backups
+
+- **Local-first:** Most of your gem records and files are stored on your device unless you use optional features such as cloud backup.
+- **You are responsible for your data:** You should keep your own backups (for example through the App’s backup or export features, or copies you maintain separately). Device loss, damage, uninstalling the App, clearing app data, or storage failure can result in **permanent loss of data** on the device.
+- **Optional cloud backup:** If you use Google Drive or iCloud Drive backup, storage and availability are also subject to Google’s or Apple’s services and your account settings.
+- **Import and export:** You are responsible for checking imported or exported files for accuracy and completeness.
+
+## 4. Certificate scanning and AI suggestions
+
+When you scan or upload a certificate image, the App may send that image to third-party services (such as Google Gemini or Google Cloud Vision) to suggest field values.
+
+- Suggestions may be **incomplete or incorrect**. You must **review and verify** all suggested values before relying on them.
+- Geminton does not guarantee that scanned or entered certificate information matches an official lab report.
+- You are solely responsible for business decisions based on record content in the App.
+
+## 5. Analytics, pricing, and exchange rates
+
+Analytics views, totals, charts, and currency conversions in the App are based on data you enter and on **approximate** exchange rates downloaded from public sources. They are for convenience only and may not be suitable for official accounts, tax filings, or audited financial statements.
+
+## 6. Labels, exhibition, and messaging
+
+If you print labels, export exhibition files, or share messages through WhatsApp, WeChat, email, or other apps:
+
+- You are responsible for the **accuracy** of what you print or send to customers and partners.
+- Geminton is not responsible for how third-party apps or printers handle your content.
+- Bluetooth label printing requires compatible hardware and permissions on your device; connection and print quality depend on your environment.
+
+## 7. Pro subscription and payments
+
+Some features require a paid **Pro** subscription.
+
+- Payment is processed by **Google Play** or the **Apple App Store** under their terms and privacy policies. Geminton does not receive or store your payment card or bank details.
+- Free trials, renewal, pricing, cancellation, and refunds are governed by the store and as described in the App and in our Privacy Policy (section on Pro subscription).
+- **Uninstalling the App does not cancel a subscription.** Cancel in your store subscription settings before a trial or billing period ends if you do not wish to be charged.
+- Subscription status may be verified using services such as RevenueCat, as described in the Privacy Policy.
+
+## 8. Acceptable use
+
+You agree not to:
+
+- Use the App for unlawful purposes or in violation of export, sanctions, or trade rules that apply to you.
+- Attempt to reverse engineer, disrupt, or misuse the App or related services except as allowed by law.
+- Upload or store content that infringes others’ rights or that you are not permitted to use.
+
+We may suspend or stop providing the App where reasonably necessary to address abuse, security issues, or legal requirements.
+
+## 9. Intellectual property
+
+The App, its branding, and underlying software are owned by the operator or licensors. These Terms do not transfer ownership to you. You retain ownership of the business data and media you enter, subject to how the App stores and processes it as described in the Privacy Policy.
+
+## 10. Disclaimer of warranties
+
+To the fullest extent permitted by applicable law, the App is provided **“as is”** and **“as available”** without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement.
+
+We do not warrant that the App will be uninterrupted, error-free, secure, or free of data loss.
+
+## 11. Limitation of liability
+
+To the fullest extent permitted by applicable law:
+
+- The operator shall **not** be liable for any **indirect, incidental, special, consequential, or punitive damages**, or for **loss of profits, revenue, business, goodwill, or data**, arising from or related to your use of (or inability to use) the App, even if advised of the possibility of such damages.
+- The operator’s **total liability** for any claims arising from or related to the App shall not exceed the **greater of** (a) the amount you paid for Pro subscriptions through the stores in the **twelve (12) months** before the event giving rise to the claim, or (b) **zero** if you paid nothing.
+
+Some jurisdictions do not allow certain exclusions or limits; in those cases, the above applies only to the extent allowed by law.
+
+## 12. Changes to these Terms
+
+We may update these Terms when the App or legal requirements change. We will update the “Last updated” date at the top. For important changes, we may also notify you in the App or in release notes. Continued use after changes take effect means you accept the updated Terms.
+
+## 13. General
+
+- **Entire agreement:** These Terms, together with the Privacy Policy, form the agreement between you and the operator regarding the App.
+- **Severability:** If any part of these Terms is held invalid, the rest remains in effect.
+- **Governing law:** These Terms are governed by the laws of **Sri Lanka**, without regard to conflict-of-law rules, except where mandatory consumer protection laws in your country require otherwise.
+
+Questions about these Terms: masheesh.ikram@gmail.com

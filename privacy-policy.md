@@ -130,3 +130,5 @@ If you use Google, Apple iCloud, or other global services, data may be processed
 We may update this policy when the App or the law changes. When we do, we will change the Last updated date at the top. For important changes, we may also tell you in the App or in release notes.
 
 Questions about this policy: masheesh.ikram@gmail.com
+
+Use of the App is also governed by our [Terms of Use](terms-of-use.html).
