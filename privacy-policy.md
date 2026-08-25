@@ -4,7 +4,7 @@ title: Privacy Policy — Geminton
 
 # Privacy Policy — Geminton
 
-Last updated: July 15, 2026
+Last updated: August 25, 2026
 
 This policy describes how the Geminton mobile application (“App”) handles information when you use it. Geminton is built for gemstone traders to manage inventory, records, media, backups, and related workflows.
 
@@ -16,7 +16,8 @@ Contact for privacy questions: masheesh.ikram@gmail.com
 - Local-first: Your gem records, preferences, and most files stay on your device unless you use optional features that send data elsewhere.
 - No Geminton account: The App does not require a Geminton login. Geminton does not operate a central server that stores your inventory for you.
 - Optional cloud backup: On Android, if you sign in with Google and use backup, backup files are stored in your Google Drive (in an app-specific area), under Google’s terms. On iOS, if you use backup and are signed in to iCloud with iCloud Drive enabled, backup files may be stored in your iCloud Drive under Apple’s terms.
-- Certificate scanning: When you scan a certificate image, the image (or encoded image data) may be sent to **Google Gemini** (Gemini Flash 3.5) to suggest fields. If Gemini is unavailable, the App may fall back to **Google Cloud Vision** (OCR). That processing is governed by Google’s policies.
+- Certificate and business card scanning: When you scan a certificate or business card image, the image (or encoded image data) may be sent to **Google Gemini** (Gemini Flash 3.5) to suggest fields. If Gemini is unavailable, the App may fall back to **Google Cloud Vision** (OCR). That processing is governed by Google’s policies.
+- Exhibition buyer contacts: Booth visitor contact details, business card images, and stone interest records are stored **locally** on your device. They may be included in **exhibition ZIP** files you export and share with colleagues (for example owner ↔ salesman). Geminton does not operate a central server for this data.
 - Analytics screen: The App may download public currency exchange rates over the internet to show approximate conversions. Those requests are not used to send your gem list to the rate provider.
 - Optional Pro subscription: Some features require a paid subscription. Payment is processed by Google Play or the Apple App Store; Geminton does not receive or store your card or bank details. Subscription status may be checked using RevenueCat (see section 1.7).
 
@@ -27,6 +28,8 @@ Contact for privacy questions: masheesh.ikram@gmail.com
 The App stores information you enter or import, including for example:
 
 - Gem details (type, weight, pricing, buyer and supplier fields, notes, certificate-related information, custom fields, and similar)
+- **Exhibition buyer contacts** (for example name, company, phone, email, country, business card photo, and optional OCR text you confirm)
+- **Booth stone interests** (for example which stones a visitor asked about, interest level, per-stone comments, exhibition name, and salesman name when logged at a show)
 - Photos, videos, documents, and audio you attach to records
 - App settings (such as field visibility, dropdown options, section order, filters, and templates)
 
@@ -57,9 +60,9 @@ If you use backup on an iPhone or iPad and are signed in to iCloud with iCloud D
 
 Apple handles iCloud sign-in and storage under Apple’s Privacy Policy and terms. Geminton does not receive your Apple ID password. iCloud backup does not show a separate permission prompt in the App; it relies on your device’s iCloud settings.
 
-### 1.4 Certificate image analysis (Google Gemini and Google Cloud Vision)
+### 1.4 Certificate and business card image analysis (Google Gemini and Google Cloud Vision)
 
-When you use certificate capture or scan, the App may send the certificate image (or encoded image data you submit) to Google services to detect text and suggest gem or certificate fields. Only images you choose to scan through this feature are involved.
+When you use certificate capture or scan, or capture a **business card** at an exhibition, the App may send the image (or encoded image data you submit) to Google services to detect text and suggest fields (for example gem/certificate details or contact name, company, phone, and email). Only images you choose to scan through these features are involved.
 
 - **Primary:** The App typically sends the image to **Google Gemini** (Gemini Flash 3.5 vision model) for analysis.
 - **Fallback:** If Gemini is unavailable (for example timeout, network error, or missing configuration), the App may use **Google Cloud Vision** for optical character recognition (OCR) and local parsing to suggest fields.
@@ -74,7 +77,7 @@ Rates may be cached on your device for a period of time to reduce data use.
 
 ### 1.6 Other apps and websites (WhatsApp, WeChat, email, browser)
 
-The App can open other apps or websites when you choose (for example to share text or open a link). Geminton does not control those services. Anything you send or post there is covered by their policies.
+The App can open other apps or websites when you choose (for example to share text, open a link, send an exhibition ZIP, or start a buyer follow-up message). For WhatsApp or WeChat follow-up, the App may pre-fill a phone number or message text you can edit before sending. Geminton does not control those services. Anything you send or post there is covered by their policies.
 
 ### 1.7 Pro subscription and payments
 
@@ -86,13 +89,23 @@ Geminton offers a free tier and an optional **Pro** subscription (monthly, auto-
 - **Cancellation and refunds:** Manage or cancel subscriptions in your device’s store subscription settings. Uninstalling the App does not cancel billing. Refunds are handled by Google or Apple according to their policies.
 - **RevenueCat:** When used, RevenueCat receives subscription and purchase events from the stores to provide entitlement status to the App. See [RevenueCat’s privacy policy](https://www.revenuecat.com/privacy/) for how they handle that data.
 
+### 1.8 Exhibition packages (owner and salesman)
+
+When you use **Exhibition** features, the App can create or read **ZIP packages** on your device that may include gem records, images, templates, **buyer contacts**, **business card images**, and **booth stone interests**.
+
+- **Export:** You choose when to create and share a package (for example with a salesman before a show, or feedback back to the owner after the show). Sharing may use WhatsApp, WeChat, email, or other apps you select.
+- **Import:** You choose when to import a package from your device or from a file received through another app.
+- **No Geminton cloud:** These packages move between people and devices only through actions you take. Geminton does not receive or store exhibition packages on its own servers.
+
+Treat exhibition packages as **business-sensitive** if they contain visitor contact details or pricing information.
+
 ## 2. Permissions
 
 Depending on your device and how you use the App, you may be asked for permissions such as:
 
 - Internet — for currency rates, Google services used by the App (such as Gemini, Cloud Vision, or Drive), iCloud backup on iOS, and general network use.
 - Network state — to understand connectivity.
-- Camera — for example QR scanning or taking pictures of certificates.
+- Camera — for example QR scanning, certificate capture, or photographing business cards at exhibitions.
 - Storage or photo library — when you pick or save files through the system.
 - Bluetooth (optional) — only if you choose **Print with Niimbot (Bluetooth)** from Gem Library. The App uses Bluetooth to discover and connect to your Niimbot label printer on your device. Geminton does not use Bluetooth for location tracking or advertising.
 
@@ -108,7 +121,8 @@ If that changes in a future release, this policy will be updated.
 
 ## 4. How long we keep data and how you can remove it
 
-- On your device: Data stays until you delete it in the App, clear the App’s data, or uninstall the App. Uninstalling usually removes the App’s local data; exact behavior depends on your device.
+- On your device: Data stays until you delete it in the App (including buyer contacts and booth interests where the App provides delete or edit controls), clear the App’s data, or uninstall the App. Uninstalling usually removes the App’s local data; exact behavior depends on your device.
+- Exhibition ZIP files you saved or shared outside the App remain wherever you stored them (for example chat apps or cloud storage) until you delete them there.
 - Google Drive: Backups remain until you delete them in Google Drive or through the App’s backup features, according to Google’s rules.
 - iCloud Drive: Backups remain until you delete them in the Files app, iCloud Drive, or through the App’s backup features, according to Apple’s rules.
 - Exchange rate cache: Stored on the device and may be updated or cleared as the App runs.
