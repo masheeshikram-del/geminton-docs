@@ -4,7 +4,7 @@ title: Terms of Use — Geminton
 
 # Terms of Use — Geminton
 
-Last updated: July 18, 2026
+Last updated: August 26, 2026
 
 These Terms of Use (“Terms”) govern your use of the Geminton mobile application (“App”). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, do not use the App.
 
@@ -28,9 +28,9 @@ The App is intended for business users who are at least **18 years old** (or the
 - **Optional cloud backup:** If you use Google Drive or iCloud Drive backup, storage and availability are also subject to Google’s or Apple’s services and your account settings.
 - **Import and export:** You are responsible for checking imported or exported files for accuracy and completeness.
 
-## 4. Certificate scanning and AI suggestions
+## 4. Certificate scanning, business card scanning, and AI suggestions
 
-When you scan or upload a certificate image, the App may send that image to third-party services (such as Google Gemini or Google Cloud Vision) to suggest field values.
+When you scan or upload a certificate image, or scan a business card at an exhibition, the App may send that image (or encoded image data) and an anonymous device identifier to **Firebase Cloud Functions** operated in Geminton’s Google Cloud project. Those functions may call third-party Google services (such as **Google Vertex AI (Gemini Flash)** and **Google Cloud Vision**) to suggest field values. Scan volume is subject to **fair-use limits** enforced on the server; if a limit is reached, the App should let you enter details manually instead of blocking you entirely.
 
 - Suggestions may be **incomplete or incorrect**. You must **review and verify** all suggested values before relying on them.
 - Geminton does not guarantee that scanned or entered certificate information matches an official lab report.

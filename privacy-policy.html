@@ -19,7 +19,7 @@
   <nav><a href="index.html">← Geminton Legal</a></nav>
 
   <h1>Privacy Policy — Geminton</h1>
-  <p class="meta">Last updated: August 25, 2026</p>
+  <p class="meta">Last updated: August 26, 2026</p>
 
   <p>This policy describes how the Geminton mobile application (“App”) handles information when you use it. Geminton is built for gemstone traders to manage inventory, records, media, backups, and related workflows.</p>
 
@@ -29,9 +29,9 @@
   <h2>Summary</h2>
   <ul>
     <li>Local-first: Your gem records, preferences, and most files stay on your device unless you use optional features that send data elsewhere.</li>
-    <li>No Geminton account: The App does not require a Geminton login. Geminton does not operate a central server that stores your inventory for you.</li>
+    <li>No Geminton account: The App does not require a Geminton login. Geminton does not operate a central server that stores your inventory for you. Optional <strong>Firebase</strong> services are used only to proxy certificate and business-card scans and to enforce fair-use limits (see section 1.4).</li>
     <li>Optional cloud backup: On Android, if you sign in with Google and use backup, backup files are stored in your Google Drive (in an app-specific area), under Google’s terms. On iOS, if you use backup and are signed in to iCloud with iCloud Drive enabled, backup files may be stored in your iCloud Drive under Apple’s terms.</li>
-    <li>Certificate and business card scanning: When you scan a certificate or business card image, the image (or encoded image data) may be sent to <strong>Google Gemini</strong> (Gemini Flash 3.5) to suggest fields. If Gemini is unavailable, the App may fall back to <strong>Google Cloud Vision</strong> (OCR). That processing is governed by Google’s policies.</li>
+    <li>Certificate and business card scanning: When you scan a certificate or business card image, the image (or encoded image data) and an <strong>anonymous device identifier</strong> are sent to <strong>Firebase Cloud Functions</strong> (Geminton’s Google Cloud project), protected by <strong>Firebase App Check</strong>. The function may call <strong>Google Vertex AI (Gemini Flash)</strong> and/or <strong>Google Cloud Vision</strong> (OCR) on the server to suggest fields. <strong>Usage counters</strong> (scan counts only) may be stored in <strong>Firestore</strong> for rate limiting—not your inventory. That processing is governed by Google’s and Firebase’s policies.</li>
     <li>Exhibition buyer contacts: Booth visitor contact details, business card images, and stone interest records are stored <strong>locally</strong> on your device. They may be included in <strong>exhibition ZIP</strong> files you export and share with colleagues (for example owner ↔ salesman). Geminton does not operate a central server for this data.</li>
     <li>Analytics screen: The App may download public currency exchange rates over the internet to show approximate conversions. Those requests are not used to send your gem list to the rate provider.</li>
     <li>Optional Pro subscription: Some features require a paid subscription. Payment is processed by Google Play or the Apple App Store; Geminton does not receive or store your card or bank details. Subscription status may be checked using RevenueCat (see section 1.7).</li>
@@ -72,13 +72,15 @@
   </ul>
   <p>Apple handles iCloud sign-in and storage under Apple’s Privacy Policy and terms. Geminton does not receive your Apple ID password. iCloud backup does not show a separate permission prompt in the App; it relies on your device’s iCloud settings.</p>
 
-  <h3>1.4 Certificate and business card image analysis (Google Gemini and Google Cloud Vision)</h3>
-  <p>When you use certificate capture or scan, or capture a <strong>business card</strong> at an exhibition, the App may send the image (or encoded image data you submit) to Google services to detect text and suggest fields (for example gem/certificate details or contact name, company, phone, and email). Only images you choose to scan through these features are involved.</p>
+  <h3>1.4 Certificate and business card image analysis (Firebase Cloud Functions)</h3>
+  <p>When you use certificate capture or scan, or capture a <strong>business card</strong> at an exhibition, the App may send the image (or base64-encoded image data you submit) plus an <strong>anonymous device identifier</strong> to <strong>Firebase Cloud Functions</strong> in the Geminton Google Cloud / Firebase project. Requests are protected by <strong>Firebase App Check</strong>. Only images you choose to scan through these features are involved.</p>
   <ul>
-    <li><strong>Primary:</strong> The App typically sends the image to <strong>Google Gemini</strong> (Gemini Flash 3.5 vision model) for analysis.</li>
-    <li><strong>Fallback:</strong> If Gemini is unavailable (for example timeout, network error, or missing configuration), the App may use <strong>Google Cloud Vision</strong> for optical character recognition (OCR) and local parsing to suggest fields.</li>
+    <li><strong>Certificate scans:</strong> The Cloud Function may analyze the image using <strong>Google Vertex AI (Gemini Flash)</strong> on the server. If that path is unavailable, the function may use <strong>Google Cloud Vision</strong> for optical character recognition (OCR) and return text so the App can apply local lab-template parsing to suggest fields.</li>
+    <li><strong>Business card scans:</strong> The Cloud Function uses <strong>Google Cloud Vision</strong> (OCR) on the server and returns suggested contact fields (for example name, company, phone, and email) for you to confirm or edit.</li>
+    <li><strong>Rate limits:</strong> To prevent abuse of paid AI/OCR services, the App generates a random <strong>device ID</strong> (UUID) on first launch, stores it in <strong>secure storage</strong> on your device, and sends it with each scan request. The Cloud Function maintains <strong>usage counters</strong> (daily and monthly scan counts only) in <strong>Firestore</strong>. These counters do not include your gem inventory, buyer contacts, or certificate text.</li>
+    <li><strong>What stays on your device:</strong> Your gem records, exhibition contacts, booth interests, and confirmed scan results remain on your device unless you use optional backup, import/export, or sharing features described elsewhere in this policy.</li>
   </ul>
-  <p>Geminton does not operate these AI or OCR services. How Google processes that content is described in Google’s Gemini, Google Cloud, and Google APIs terms and privacy materials.</p>
+  <p>Geminton does not operate Vertex AI or Cloud Vision directly. How Google and Firebase process scan requests is described in Google’s Cloud, Vertex AI, Firebase, and API terms and privacy materials.</p>
 
   <h3>1.5 Exchange rates (analytics)</h3>
   <p>The App may download public currency rate data from the internet (for example from publicly hosted data feeds) to convert amounts in analytics views. Those requests are not intended to send your per-stone records to those providers.</p>
@@ -109,7 +111,7 @@
   <h2>2. Permissions</h2>
   <p>Depending on your device and how you use the App, you may be asked for permissions such as:</p>
   <ul>
-    <li>Internet — for currency rates, Google services used by the App (such as Gemini, Cloud Vision, or Drive), iCloud backup on iOS, and general network use.</li>
+    <li>Internet — for currency rates, Firebase Cloud Functions (certificate and business-card scans), Google services used by those functions (Vertex AI, Cloud Vision), Google Drive backup on Android, iCloud backup on iOS, subscription checks, and general network use.</li>
     <li>Network state — to understand connectivity.</li>
     <li>Camera — for example QR scanning, certificate capture, or photographing business cards at exhibitions.</li>
     <li>Storage or photo library — when you pick or save files through the system.</li>
@@ -122,6 +124,7 @@
     <li>The App can show summaries and charts based on your data on your device. That is not the same as sending your full inventory to a Geminton analytics service.</li>
     <li>The current release of the App does not include third-party advertising software development kits for ads.</li>
     <li>The current release of the App does not use Firebase Analytics or Firebase Crashlytics.</li>
+    <li>The App uses <strong>Firebase Core</strong>, <strong>Firebase App Check</strong>, and <strong>Cloud Functions</strong> only for authenticated scan proxying and usage limits (see section 1.4)—not for advertising or cross-app tracking.</li>
   </ul>
   <p>If that changes in a future release, this policy will be updated.</p>
 
