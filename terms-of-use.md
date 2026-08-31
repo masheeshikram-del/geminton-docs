@@ -4,7 +4,7 @@ title: Terms of Use — Geminton
 
 # Terms of Use — Geminton
 
-Last updated: August 26, 2026
+Last updated: August 31, 2026
 
 These Terms of Use (“Terms”) govern your use of the Geminton mobile application (“App”). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, do not use the App.
 
@@ -38,7 +38,7 @@ When you scan or upload a certificate image, or scan a business card at an exhib
 
 ## 5. Analytics, pricing, and exchange rates
 
-Analytics views, totals, charts, and currency conversions in the App are based on data you enter and on **approximate** exchange rates downloaded from public sources. They are for convenience only and may not be suitable for official accounts, tax filings, or audited financial statements.
+Analytics views, totals, charts, and currency conversions in the App are based on data you enter and on **approximate** exchange rates downloaded from public sources. Totals use purchase, asking, sale, and payment fields you enter; stones with missing details may be left out of money figures, and the App may list those records so you can complete them. Analytics is for convenience only and may not be suitable for official accounts, tax filings, or audited financial statements.
 
 ## 6. Labels, exhibition, and messaging
 
