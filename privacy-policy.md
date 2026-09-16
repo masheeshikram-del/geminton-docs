@@ -4,7 +4,7 @@ title: Privacy Policy — Geminton
 
 # Privacy Policy — Geminton
 
-Last updated: August 26, 2026
+Last updated: September 12, 2026
 
 This policy describes how the Geminton mobile application (“App”) handles information when you use it. Geminton is built for gemstone traders to manage inventory, records, media, backups, and related workflows.
 
@@ -14,12 +14,14 @@ Contact for privacy questions: masheesh.ikram@gmail.com
 ## Summary
 
 - Local-first: Your gem records, preferences, and most files stay on your device unless you use optional features that send data elsewhere.
-- No Geminton account: The App does not require a Geminton login. Geminton does not operate a central server that stores your inventory for you. Optional **Firebase** services are used only to proxy certificate and business-card scans and to enforce fair-use limits (see section 1.4).
+- No Geminton account: The App does not require a Geminton login. Geminton does not operate a central server that stores your inventory for you. Optional **Firebase** services are used only to proxy certificate and business-card scans, to route typed **Ask Geminton** questions (typed questions from the same chat only — not your inventory), and to enforce fair-use limits (see section 1.4).
 - Optional cloud backup: On Android, if you sign in with Google and use backup, backup files are stored in your Google Drive (in an app-specific area), under Google’s terms. On iOS, if you use backup and are signed in to iCloud with iCloud Drive enabled, backup files may be stored in your iCloud Drive under Apple’s terms.
-- Certificate and business card scanning: When you scan a certificate or business card image, the image (or encoded image data) and an **anonymous device identifier** are sent to **Firebase Cloud Functions** (Geminton’s Google Cloud project), protected by **Firebase App Check**. The function may call **Google Vertex AI (Gemini Flash)** and/or **Google Cloud Vision** (OCR) on the server to suggest fields. **Usage counters** (scan counts only) may be stored in **Firestore** for rate limiting—not your inventory. That processing is governed by Google’s and Firebase’s policies.
+- Certificate and business card scanning: When you scan a certificate or business card image, the image (or encoded image data) and an **anonymous device identifier** are sent to **Firebase Cloud Functions** (Geminton’s Google Cloud project), protected by **Firebase App Check**. The function may call **Google Vertex AI (Gemini Flash)** and/or **Google Cloud Vision** (OCR) on the server to suggest fields. **Usage counters** (scan and chat counts only) may be stored in **Firestore** for rate limiting—not your inventory. That processing is governed by Google’s and Firebase’s policies.
+- Ask Geminton chat: A **typed** question may send **that sentence plus up to four earlier typed questions from the same chat** and an **anonymous device identifier** to Firebase Cloud Functions so Vertex AI can pick a local tool. **Suggestion chips** you tap are answered on the device and are not sent. Assistant replies are **not** sent (they can list stones). Gem records, buyer names, prices, and totals are **not** uploaded. Payment-reminder on/off and *clear chat* stay on the device.
 - Exhibition buyer contacts: Booth visitor contact details, business card images, and stone interest records are stored **locally** on your device. They may be included in **exhibition ZIP** files you export and share with colleagues (for example owner ↔ salesman). Geminton does not operate a central server for this data.
 - Analytics screen: The App may download public currency exchange rates over the internet to show approximate conversions. Those requests are not used to send your gem list to the rate provider.
 - Optional Pro subscription: Some features require a paid subscription. Payment is processed by Google Play or the Apple App Store; Geminton does not receive or store your card or bank details. Subscription status may be checked using RevenueCat (see section 1.7).
+- Payment due reminders: Optional local banners on this phone only. Buyer and supplier names and amounts can appear in the system notification shade. There is no push service (no FCM). Uninstalling the App removes scheduled reminders.
 
 ## 1. Information the App processes
 
@@ -31,7 +33,7 @@ The App stores information you enter or import, including for example:
 - **Exhibition buyer contacts** (for example name, company, phone, email, country, business card photo, and optional OCR text you confirm)
 - **Booth stone interests** (for example which stones a visitor asked about, interest level, per-stone comments, exhibition name, and salesman name when logged at a show)
 - Photos, videos, documents, and audio you attach to records
-- App settings (such as field visibility, dropdown options, section order, filters, and templates)
+- App settings (such as field visibility, dropdown options, section order, filters, templates, and the payment due reminders switch)
 
 This data is mainly stored on your device using local storage (including a local database and files on the device).
 
@@ -60,16 +62,17 @@ If you use backup on an iPhone or iPad and are signed in to iCloud with iCloud D
 
 Apple handles iCloud sign-in and storage under Apple’s Privacy Policy and terms. Geminton does not receive your Apple ID password. iCloud backup does not show a separate permission prompt in the App; it relies on your device’s iCloud settings.
 
-### 1.4 Certificate and business card image analysis (Firebase Cloud Functions)
+### 1.4 Certificate scans, business cards, and Ask Geminton questions (Firebase Cloud Functions)
 
 When you use certificate capture or scan, or capture a **business card** at an exhibition, the App may send the image (or base64-encoded image data you submit) plus an **anonymous device identifier** to **Firebase Cloud Functions** in the Geminton Google Cloud / Firebase project. Requests are protected by **Firebase App Check**. Only images you choose to scan through these features are involved.
 
 - **Certificate scans:** The Cloud Function may analyze the image using **Google Vertex AI (Gemini Flash)** on the server. If that path is unavailable, the function may use **Google Cloud Vision** for optical character recognition (OCR) and return text so the App can apply local lab-template parsing to suggest fields.
 - **Business card scans:** The Cloud Function uses **Google Cloud Vision** (OCR) on the server and returns suggested contact fields (for example name, company, phone, and email) for you to confirm or edit.
-- **Rate limits:** To prevent abuse of paid AI/OCR services, the App generates a random **device ID** (UUID) on first launch, stores it in **secure storage** on your device, and sends it with each scan request. The Cloud Function maintains **usage counters** (daily and monthly scan counts only) in **Firestore**. These counters do not include your gem inventory, buyer contacts, or certificate text.
+- **Ask Geminton questions:** Suggestion chips, payment-reminder on/off, and *clear chat* are answered on your device. A typed question may send **that sentence plus up to four earlier typed questions from the same chat** (and the same anonymous device id) to a Cloud Function that uses **Google Vertex AI (Gemini Flash)** to choose which on-device tool to run. If that call fails or the daily/monthly limit is reached, the phone uses its own match when it is sure. Assistant replies are not sent. The function does **not** receive gem records, buyer names, prices, or inventory lists. The answer is still computed on your phone. Cloud Vision is not used for chat.
+- **Rate limits:** To prevent abuse of paid AI/OCR services, the App generates a random **device ID** (UUID) on first launch, stores it in **secure storage** on your device, and sends it with each scan or unclear chat request. The Cloud Function maintains **usage counters** (daily and monthly scan and chat counts only) in **Firestore**. These counters do not include your gem inventory, buyer contacts, certificate text, or the wording of your questions.
 - **What stays on your device:** Your gem records, exhibition contacts, booth interests, and confirmed scan results remain on your device unless you use optional backup, import/export, or sharing features described elsewhere in this policy.
 
-Geminton does not operate Vertex AI or Cloud Vision directly. How Google and Firebase process scan requests is described in Google’s Cloud, Vertex AI, Firebase, and API terms and privacy materials.
+Geminton does not operate Vertex AI or Cloud Vision directly. How Google and Firebase process these requests is described in Google’s Cloud, Vertex AI, Firebase, and API terms and privacy materials.
 
 ### 1.5 Exchange rates (analytics)
 
@@ -105,11 +108,12 @@ Treat exhibition packages as **business-sensitive** if they contain visitor cont
 
 Depending on your device and how you use the App, you may be asked for permissions such as:
 
-- Internet — for currency rates, Firebase Cloud Functions (certificate and business-card scans), Google services used by those functions (Vertex AI, Cloud Vision), Google Drive backup on Android, iCloud backup on iOS, subscription checks, and general network use.
+- Internet — for currency rates, Firebase Cloud Functions (certificate and business-card scans, and typed Ask Geminton questions), Google services used by those functions (Vertex AI, Cloud Vision), Google Drive backup on Android, iCloud backup on iOS, subscription checks, and general network use.
 - Network state — to understand connectivity.
 - Camera — for example QR scanning, certificate capture, or photographing business cards at exhibitions.
 - Storage or photo library — when you pick or save files through the system.
 - Bluetooth (optional) — only if you choose **Print with Niimbot (Bluetooth)** from Gem Library. The App uses Bluetooth to discover and connect to your Niimbot label printer on your device. Geminton does not use Bluetooth for location tracking or advertising.
+- Notifications — for **Payment due reminders** on this device (buyer and supplier due dates). Reminders are scheduled locally; they are not sent through a Geminton or Google push server. You can turn them off in Configure or by denying the system permission. Uninstalling the App clears pending reminders.
 
 The exact wording and timing of permission requests are controlled by your operating system.
 
@@ -118,7 +122,7 @@ The exact wording and timing of permission requests are controlled by your opera
 - The App can show summaries and charts based on your data on your device. That is not the same as sending your full inventory to a Geminton analytics service.
 - The current release of the App does not include third-party advertising software development kits for ads.
 - The current release of the App does not use Firebase Analytics or Firebase Crashlytics.
-- The App uses **Firebase Core**, **Firebase App Check**, and **Cloud Functions** only for authenticated scan proxying and usage limits (see section 1.4)—not for advertising or cross-app tracking.
+- The App uses **Firebase Core**, **Firebase App Check**, and **Cloud Functions** only for authenticated scan and Ask Geminton proxying and usage limits (see section 1.4)—not for advertising or cross-app tracking.
 
 If that changes in a future release, this policy will be updated.
 
@@ -129,6 +133,7 @@ If that changes in a future release, this policy will be updated.
 - Google Drive: Backups remain until you delete them in Google Drive or through the App’s backup features, according to Google’s rules.
 - iCloud Drive: Backups remain until you delete them in the Files app, iCloud Drive, or through the App’s backup features, according to Apple’s rules.
 - Exchange rate cache: Stored on the device and may be updated or cleared as the App runs.
+- Ask Geminton cloud questions: The typed question (and up to four earlier typed questions from the same chat) is sent only to route the question; Geminton does not store your inventory or those sentences in Firestore. Usage counters (counts only) stay until the daily or monthly window resets.
 
 ## 5. Security
 
