@@ -4,7 +4,7 @@ title: Terms of Use — Geminton
 
 # Terms of Use — Geminton
 
-Last updated: August 31, 2026
+Last updated: September 26, 2026
 
 These Terms of Use (“Terms”) govern your use of the Geminton mobile application (“App”). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, do not use the App.
 
@@ -30,7 +30,7 @@ The App is intended for business users who are at least **18 years old** (or the
 
 ## 4. Certificate scanning, business card scanning, and AI suggestions
 
-When you scan or upload a certificate image, or scan a business card at an exhibition, the App may send that image (or encoded image data) and an anonymous device identifier to **Firebase Cloud Functions** operated in Geminton’s Google Cloud project. Those functions may call third-party Google services (such as **Google Vertex AI (Gemini Flash)** and **Google Cloud Vision**) to suggest field values. Scan volume is subject to **fair-use limits** enforced on the server; if a limit is reached, the App should let you enter details manually instead of blocking you entirely.
+When you scan or upload a certificate image, or scan a business card at an exhibition, the App may send that image (or encoded image data) and an anonymous device identifier to **Firebase Cloud Functions** operated in Geminton’s Google Cloud project. Those functions may call third-party Google services (such as **Google Vertex AI (Gemini Flash)** and **Google Cloud Vision**) to suggest field values. Scan volume is subject to **fair-use limits** enforced on the server; if a limit is reached, the App should let you enter details manually instead of blocking you entirely. A spoken Ask Geminton question may send that short microphone clip the same way (Vertex only, same chat fair-use count as a typed cloud question). Voice on Add Gem may send a short clip the same way and uses the certificate scan fair-use count. The clip is not saved. Spoken suggestions can be wrong; review them before you rely on them.
 
 - Suggestions may be **incomplete or incorrect**. You must **review and verify** all suggested values before relying on them.
 - Geminton does not guarantee that scanned or entered certificate information matches an official lab report.
