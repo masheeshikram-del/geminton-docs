@@ -4,7 +4,7 @@ title: Privacy Policy — Geminton
 
 # Privacy Policy — Geminton
 
-Last updated: September 26, 2026
+Last updated: September 30, 2026
 
 This policy describes how the Geminton mobile application (“App”) handles information when you use it. Geminton is built for gemstone traders to manage inventory, records, media, backups, and related workflows.
 
@@ -14,7 +14,8 @@ Contact for privacy questions: masheesh.ikram@gmail.com
 ## Summary
 
 - Local-first: Your gem records, preferences, and most files stay on your device unless you use optional features that send data elsewhere.
-- No Geminton account: The App does not require a Geminton login. Geminton does not operate a central server that stores your inventory for you. Optional **Firebase** services are used only to proxy certificate and business-card scans, to route typed or spoken **Ask Geminton** questions (the question and earlier typed questions from the same chat only — not your inventory), and to enforce fair-use limits (see section 1.4).
+- No Geminton account: The App does not require a Geminton login. Geminton does not operate a central server that stores your inventory for you. Optional **Firebase** services are used only to proxy certificate and business-card scans, to route typed or spoken **Ask Geminton** questions (the question and earlier typed questions from the same chat only — not your inventory), to receive feedback you choose to send from **About → Send Feedback**, and to enforce fair-use limits (see sections 1.4 and 1.4.1).
+- Send Feedback: If you send a bug report or suggestion, the text you write, an optional screenshot you attach, and basic diagnostics (app version, platform, OS version, device model, and the anonymous device identifier) are stored in Geminton’s **Firebase** project (Firestore and Cloud Storage) for the developer to review. Gem records are not sent.
 - Optional cloud backup: On Android, if you sign in with Google and use backup, backup files are stored in your Google Drive (in an app-specific area), under Google’s terms. On iOS, if you use backup and are signed in to iCloud with iCloud Drive enabled, backup files may be stored in your iCloud Drive under Apple’s terms.
 - Certificate and business card scanning: When you scan a certificate or business card image, the image (or encoded image data) and an **anonymous device identifier** are sent to **Firebase Cloud Functions** (Geminton’s Google Cloud project), protected by **Firebase App Check**. The function may call **Google Vertex AI (Gemini Flash)** and/or **Google Cloud Vision** (OCR) on the server to suggest fields. **Usage counters** (scan and chat counts only) may be stored in **Firestore** for rate limiting—not your inventory. That processing is governed by Google’s and Firebase’s policies.
 - Ask Geminton chat: A **typed** question may send **that sentence plus up to four earlier typed questions from the same chat** and an **anonymous device identifier** to Firebase Cloud Functions so Vertex AI can pick a local tool. A **spoken** question sends that short microphone clip once (plus the same earlier typed questions and device id) so Vertex can hear it and pick the tool in the same call. The clip is not saved on the stone or in Firestore. **Suggestion chips** you tap are answered on the device and are not sent. Assistant replies are **not** sent (they can list stones). Gem records, buyer names, prices, and totals are **not** uploaded. Payment-reminder on/off and *clear chat* stay on the device.
@@ -73,6 +74,10 @@ When you use certificate capture or scan, or capture a **business card** at an e
 - **What stays on your device:** Your gem records, exhibition contacts, booth interests, and confirmed scan results remain on your device unless you use optional backup, import/export, or sharing features described elsewhere in this policy.
 
 Geminton does not operate Vertex AI or Cloud Vision directly. How Google and Firebase process these requests is described in Google’s Cloud, Vertex AI, Firebase, and API terms and privacy materials.
+
+#### 1.4.1 Send Feedback
+
+**About → Send Feedback** is optional. When you tap **Submit**, the App sends to a Firebase Cloud Function (protected by App Check): the type (bug or suggestion), the description you wrote, an optional screenshot or photo you chose, the App version and build, platform (Android or iOS), OS version, device model, and the anonymous device identifier described above. The function stores this in **Firestore** (`feedback`) and the screenshot in **Firebase Cloud Storage**, where the developer reviews it. Nothing from your gem records, contacts, or backups is included unless you type it or it is visible in a screenshot you attach. To limit abuse, each install can send up to 5 feedback items per day; the usage counter stores counts only.
 
 ### 1.5 Exchange rates (analytics)
 
@@ -135,6 +140,7 @@ If that changes in a future release, this policy will be updated.
 - iCloud Drive: Backups remain until you delete them in the Files app, iCloud Drive, or through the App’s backup features, according to Apple’s rules.
 - Exchange rate cache: Stored on the device and may be updated or cleared as the App runs.
 - Ask Geminton cloud questions: The typed question (and up to four earlier typed questions from the same chat), or a spoken clip, is sent only to route the question; Geminton does not store your inventory, those sentences, or the clip in Firestore. Usage counters (counts only) stay until the daily or monthly window resets.
+- Feedback you send: Kept in Firestore and Cloud Storage (screenshots) for as long as needed to follow up on bugs and suggestions. To ask for your feedback to be deleted, email the privacy contact above with the approximate date and what you sent.
 
 ## 5. Security
 
