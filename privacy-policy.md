@@ -4,7 +4,7 @@ title: Privacy Policy — Geminton
 
 # Privacy Policy — Geminton
 
-Last updated: September 30, 2026
+Last updated: October 3, 2026
 
 This policy describes how the Geminton mobile application (“App”) handles information when you use it. Geminton is built for gemstone traders to manage inventory, records, media, backups, and related workflows.
 
@@ -159,5 +159,7 @@ If you use Google, Apple iCloud, or other global services, data may be processed
 We may update this policy when the App or the law changes. When we do, we will change the Last updated date at the top. For important changes, we may also tell you in the App or in release notes.
 
 Questions about this policy: masheesh.ikram@gmail.com
+
+For help using the App, subscriptions, or backups, see our [Support page](support.html).
 
 Use of the App is also governed by our [Terms of Use](terms-of-use.html).

@@ -4,7 +4,7 @@ title: Terms of Use — Geminton
 
 # Terms of Use — Geminton
 
-Last updated: September 26, 2026
+Last updated: October 3, 2026
 
 These Terms of Use (“Terms”) govern your use of the Geminton mobile application (“App”). By downloading, installing, or using the App, you agree to these Terms. If you do not agree, do not use the App.
 
@@ -97,3 +97,5 @@ We may update these Terms when the App or legal requirements change. We will upd
 - **Governing law:** These Terms are governed by the laws of **Sri Lanka**, without regard to conflict-of-law rules, except where mandatory consumer protection laws in your country require otherwise.
 
 Questions about these Terms: masheesh.ikram@gmail.com
+
+For help using the App, subscriptions, or backups, see our [Support page](support.html).
