@@ -21,12 +21,13 @@ You can also send a bug report or suggestion from inside the app: **Menu → Abo
 
 ### How do I subscribe to Geminton Pro?
 
-Menu → **About** → **Upgrade to Pro** (or tap any **Pro** badge) → **Start free trial** → confirm in **Google Play** or the **App Store**.
+Menu → **About** → **Upgrade to Pro** (or tap any **Pro** badge) → **Start free trial** (or **Subscribe** if you've had Pro before) → confirm in **Google Play** or the **App Store**.
 
 ### Is there a free trial? When am I charged?
 
 - **3-month free trial** for new subscribers—you pay **nothing** during the trial.
 - After that, **monthly** renewal at the store price **unless you cancel before the trial ends**.
+- The free trial is **once per store account**. If you subscribe again later, there's no second trial: you're charged from the day you subscribe again—or, if your original trial hasn't ended yet, from the day it ends.
 
 ### How do I cancel or unsubscribe?
 
